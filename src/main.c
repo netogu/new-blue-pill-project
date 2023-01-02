@@ -17,9 +17,7 @@ void sleep_ms(uint32_t ms){
 static void gpio_setup(void){
 
   rcc_periph_clock_enable(RCC_GPIOC);
-
   gpio_set(GPIOC,GPIO13);
-
   gpio_set_mode(GPIOC, GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO13);
 
 
@@ -46,7 +44,7 @@ int main(void){
 
   while(1){
     gpio_toggle(GPIOC,GPIO13);
-    sleep_ms(200);
+    sleep_ms(250);
   }
 
 }
